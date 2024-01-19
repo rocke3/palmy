@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+* {
+    transition: 0.3s all;
+}
+input {
+    border-radius: 50px !important;
+    border: 2px solid #eeeef5 !important;
+    padding: 15px 25px !important;
+}
+input:focus {
+    border: 2px solid #8280af !important;
+}
+
+@layer components {
+    .btn {
+        @apply rounded-full px-5 py-2 sm:px-7 bg-white hover:bg-[#8280af] hover:text-white border-2 border-white shadow-md shadow-[#8280af] inline-block;
+    }
+    .btn-home {
+        @apply font-extrabold text-xl;
+    }
+    .btn-alt {
+        @apply bg-[#8280af] text-white hover:bg-white hover:text-[#8280af];
+    }
+    .btn-primary {
+        @apply p-4 bg-gradient-to-r from-[#9791b7] to-[#cab8cc] border-0 text-white text-xl shadow-sm hover:shadow-md hover:bg-gradient-to-l;
+    }
+}
