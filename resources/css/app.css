@@ -8,26 +8,49 @@
 * {
     transition: 0.3s all;
 }
-input {
-    border-radius: 50px !important;
-    border: 2px solid #eeeef5 !important;
-    padding: 15px 25px !important;
+
+input[type="radio"] {
+    padding: 7px !important;
 }
-input:focus {
-    border: 2px solid #8280af !important;
+input[type="checkbox"] {
+    padding: 7px !important;
+    border-radius: 100%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border: 1px solid #edecf2;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9c97bc;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9c97bc;
 }
 
 @layer components {
     .btn {
-        @apply rounded-full px-5 py-2 sm:px-7 bg-white hover:bg-[#8280af] hover:text-white border-2 border-white shadow-md shadow-[#8280af] inline-block;
+        @apply rounded-full px-4 py-1 sm:px-7 bg-white hover:bg-[#8280af] hover:text-white border-2 border-white shadow-md shadow-[#8280af] inline-block;
     }
     .btn-home {
         @apply font-extrabold text-xl;
     }
+    .btn-gradiant {
+        @apply bg-gradient-to-r from-[#9791b7] to-[#cab8cc]  border-0 text-white hover:bg-gradient-to-l;
+    }
     .btn-alt {
         @apply bg-[#8280af] text-white hover:bg-white hover:text-[#8280af];
     }
-    .btn-primary {
-        @apply p-4 bg-gradient-to-r from-[#9791b7] to-[#cab8cc] border-0 text-white text-xl shadow-sm hover:shadow-md hover:bg-gradient-to-l;
+    .box {
+        @apply bg-white rounded-[40px] border-4 border-[#8280af];
     }
 }
