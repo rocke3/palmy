@@ -41,7 +41,7 @@
                         <a class="btn btn-home btn-alt pe-14 relative" href="/login">
                             SIGN IN
                             <span
-                                class="material-symbols-outlined absolute bg-white rounded-full h-[35px] w-[35px] text-[27px] ms-4 text-center text-[#8280af] p-[3px] right-[5px] top-[5px]">person</span>
+                                class="material-symbols-outlined absolute bg-white rounded-full h-[27px] w-[27px] text-[22px] ms-4 text-center text-[#8280af] p-[3px] right-[5px] top-[5px]">person</span>
                         </a>
                     </div>
                 </div>
@@ -64,7 +64,8 @@
                             </a>
                         </div>
                     </div>
-                    @if (Route::is('login') || Route::is('/'))
+
+                    @if (!Route::is('register'))
                         <div class=" mt-4 text-center">
                             <a class="inline-block p-1" href="">
                                 <img class="shadow rounded-xl hover:shadow-lg" width="190" src="/img/appstore.png">

@@ -34,7 +34,7 @@
             <!-- Email Address -->
             <div class="mt-4">
                 <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required autocomplete="username" />
+                    required autocomplete="username" placeholder="Enter Your Email" />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
@@ -42,7 +42,7 @@
             <div class="mt-4">
 
                 <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="new-password" />
+                    autocomplete="new-password" placeholder="Enter Password" />
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
@@ -51,7 +51,7 @@
             <div class="mt-4">
 
                 <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                    name="password_confirmation" required autocomplete="new-password" />
+                    name="password_confirmation" required autocomplete="new-password" placeholder="Re-Enter Password" />
 
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>

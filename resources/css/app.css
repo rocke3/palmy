@@ -45,7 +45,7 @@ input[type="checkbox"] {
         @apply font-extrabold text-xl;
     }
     .btn-gradiant {
-        @apply bg-gradient-to-r from-[#9791b7] to-[#cab8cc]  border-0 text-white hover:bg-gradient-to-l;
+        @apply bg-gradient-to-r from-[#9791b7] to-[#cab8cc]  border-0 text-white hover:bg-gradient-to-l font-bold;
     }
     .btn-alt {
         @apply bg-[#8280af] text-white hover:bg-white hover:text-[#8280af];
