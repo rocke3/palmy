@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Storage;
-use ErlandMuchasaj\LaravelFileUploader\FileUploader;
+
 
 class OrgController extends Controller
 {
@@ -28,9 +28,9 @@ class OrgController extends Controller
     public function update(OrgUpdateRequest $request): RedirectResponse
     {
         $request->user()->fill($request->validated());
-        $file = $request->file('file');
-        $response = FileUploader::store($file);
-dd($request);
+        if($request->image) $request->image->move(public_path('images'), $request->image->getClientOriginalName());
+        $request->image = $request->image->getClientOriginalName();
+
         $request->user()->save();
 
         return Redirect::route('doc.edit');

@@ -25,6 +25,7 @@ Route::get('/dashboard', function () {
   if($user->group == 1 && $user->name == null){
     return redirect('/organization');
   }elseif($user->document == null){
+    
     return redirect('/document');
   }else {
     return view('dashboard');
@@ -34,14 +35,14 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
   Route::get('/organization', [OrgController::class, 'edit'])->name('org.edit');
-  Route::patch('/organization', [OrgController::class, 'update'])->name('org.update');
+  Route::post('/organization', [OrgController::class, 'update'])->name('org.update');
 });
 
 
 
 Route::middleware('auth')->group(function () {
   Route::get('/document', [DocController::class, 'edit'])->name('doc.edit');
-  Route::patch('/document', [DocController::class, 'update'])->name('doc.update');
+  Route::post('/document', [DocController::class, 'update'])->name('doc.update');
 });
 
 

@@ -17,7 +17,7 @@ class OrgUpdateRequest extends FormRequest
         return [
             'about' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
-            'image' => ['string', 'max:255'],
+            'image' => ['image','mimes:jpg,png,jpeg','dimensions:min_width=100,min_height=100,max_width=1200,max_height=1200','max:1048'],
             'type' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:255'],
             'city' => ['required', 'string', 'max:255'],
