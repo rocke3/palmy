@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="py-12">
         <div class="box max-w-[700px] mx-auto m-1 p-4 py-6 relative">
-            <form class="my-6 py-6" action="{{ route('doc.update') }}" method="post" enctype="multipart/form-data">
+            <form class="my-6 py-6" action="{{ route('doc.update') }}" method="post">
                 @csrf
                 @method('post')
                 <div class="mt-4">

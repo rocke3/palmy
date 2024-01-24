@@ -16,7 +16,7 @@ class DocUpdateRequest extends FormRequest
     {
       
         return [
-            'document' => ['required','mimes:jpg,png,jpeg,pdf','max:2500'],
+            'document' => [],
         ];
     }
 }
