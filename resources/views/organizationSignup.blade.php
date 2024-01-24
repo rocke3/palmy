@@ -19,25 +19,15 @@
                             <label id="imageUp"
                                 class=" cursor-pointer w-[150px] h-[150px] mx-auto bg-slate-100 hover:bg-red-100 block rounded-full text-center p-[35px] relative hover:shadow">
                                 <span class="material-symbols-outlined text-[80px] opacity-10">image</span>
-                                <input type="file" id="image" name="image" class="hidden"
+                                <input type="file" id="image" name="imagefile" class="hidden"
                                     accept="image/jpg, image/jpeg, image/png">
                                 <span
                                     class="material-symbols-outlined absolute bottom-0 right-0 bg-gradient-to-r from-[#9791b7] to-[#cab8cc] rounded-full p-2 text-white hover:shadow">upload</span>
                             </label>
-                            <x-input-error :messages="$errors->get('image')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('imagefile')" class="mt-2" />
                             <span class=" text-[#b0a3c2] text-sm inline-block text-center mt-2">Maximum allowed file
-                                size is
-                                1MB and dimensions should
-                                be less than 1080x1080 pixels.</span>
-                            <script>
-                                image.onchange = evt => {
-                                    const [file] = image.files
-                                    if (file) {
-                                        let img = URL.createObjectURL(file)
-                                        document.querySelector('#imageUp').style.backgroundImage = `url('${img}')`;
-                                    }
-                                }
-                            </script>
+                                size is 1MB and dimensions should be less than 1080x1080 pixels.</span>
+
                         </div>
                         <div class="mt-12">
                             <x-text-area class="text-center" name="about" placeholder="About The Organization"
@@ -85,4 +75,15 @@
         </div>
 
     </div>
+
+    <script>
+        image.onchange = evt => {
+            const [file] = image.files
+            console.log(file);
+            if (file) {
+                let img = URL.createObjectURL(file)
+                document.querySelector('#imageUp').style.backgroundImage = `url('${img}')`;
+            }
+        }
+    </script>
 </x-app-layout>

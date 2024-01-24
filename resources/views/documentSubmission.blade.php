@@ -1,9 +1,9 @@
 <x-app-layout>
     <div class="py-12">
         <div class="box max-w-[700px] mx-auto m-1 p-4 py-6 relative">
-            <form class="my-6 py-6" action="{{ route('doc.update') }}" method="post">
+            <form class="my-6 py-6" action="{{ route('doc.update') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                @method('patch')
+                @method('post')
                 <div class="mt-4">
                     <label
                         class="border-dashed border-2 border-[#a19cbf] text-center cursor-pointer block max-w-[400px] mx-auto p-6 rounded-[20px]">
@@ -12,11 +12,16 @@
                         <p class="mb-4 text-slate-400 text-lg">*PDF/Images Only</p>
                         <span
                             class="material-symbols-outlined text-[40px] text-white rounded bg-gradient-to-r from-[#9791b8] to-[#c9b7cc]">add</span>
-                        <x-text-input class="hidden" type="file" name="document" :value="old('document')" required />
+                        <x-text-input class="hidden" id="pdfup" type="file" name="document" :value="old('document')"
+                            required accept="application/pdf,image/jpg, image/jpeg, image/png" />
                     </label>
+                    <div class=" text-[#b0a3c2] text-sm mt-2 text-center">
+                        Maximum allowed file size is 1MB and dimensions should be less than 1080x1080 pixels.
+                    </div>
                     <x-input-error :messages="$errors->get('document')" class="mt-2" />
                 </div>
-                <div class="mt-10 pt-10 text-center">
+
+                <div class="mt-6 sm:mt-10 sm:pt-10 text-center">
                     <x-primary-button class="max-w-[350px]">{{ __('Next') }}</x-primary-button>
                 </div>
             </form>

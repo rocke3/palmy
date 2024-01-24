@@ -16,12 +16,13 @@
     </style>
 
     <div class="container py-12">
+
         <div class="lg:grid lg:grid-cols-3 gap-4">
             {{-- Left side --}}
             <div class="">
                 <div class="bg-white overflow-hidden shadow-sm rounded-[25px] mb-4 min-h-[320px]">
                     <div class="p-6 text-gray-900 text-center">
-                        <img class="m-auto" src="/img/fb.png" width="100">
+                        <img class="m-auto rounded-full" src="/images/{{ Auth::user()->image }}" width="100">
                         <h3 class="mt-5">{{ Auth::user()->name }}</h3>
                         <p class="text-[#8381af] mt-2"><span
                                 class="material-symbols-outlined align-bottom">location_on</span>{{ Auth::user()->address }},

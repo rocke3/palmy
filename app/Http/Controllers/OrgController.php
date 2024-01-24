@@ -28,8 +28,13 @@ class OrgController extends Controller
     public function update(OrgUpdateRequest $request): RedirectResponse
     {
         $request->user()->fill($request->validated());
-        if($request->image) $request->image->move(public_path('images'), $request->image->getClientOriginalName());
-        $request->image = $request->image->getClientOriginalName();
+        if($request->imagefile){
+          $image = $request->imagefile->getClientOriginalName();
+          $ext = pathinfo($image, PATHINFO_EXTENSION);
+          $image = time() + rand(10,100) . "." . $ext;
+          $request->imagefile->move(public_path('images'), $image);
+          $request->user()->image = $image;
+        }
 
         $request->user()->save();
 

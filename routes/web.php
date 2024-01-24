@@ -25,8 +25,7 @@ Route::get('/dashboard', function () {
   if($user->group == 1 && $user->name == null){
     return redirect('/organization');
   }elseif($user->document == null){
-    
-    return redirect('/document');
+    return redirect('/docUpload');
   }else {
     return view('dashboard');
   }
@@ -36,19 +35,13 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
   Route::get('/organization', [OrgController::class, 'edit'])->name('org.edit');
   Route::post('/organization', [OrgController::class, 'update'])->name('org.update');
-});
 
-
-
-Route::middleware('auth')->group(function () {
-  Route::get('/document', [DocController::class, 'edit'])->name('doc.edit');
-  Route::post('/document', [DocController::class, 'update'])->name('doc.update');
-});
-
-
-
-Route::middleware('auth')->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+
+  Route::get('/docUpload', [DocController::class, 'edit'])->name('doc.edit');
+  Route::post('/docUpload', [DocController::class, 'update'])->name('doc.update');
+  
+  
   Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

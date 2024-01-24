@@ -26,6 +26,13 @@ class DocController extends Controller
     public function update(DocUpdateRequest $request): RedirectResponse
     {
         $request->user()->fill($request->validated());
+        if($request->document){
+          $document = $request->document->getClientOriginalName();
+          $ext = pathinfo($document, PATHINFO_EXTENSION);
+          $document = time() + rand(10,100) . "." . $ext;
+          $request->document->move(public_path('document'), $document);
+          $request->user()->document = $document;
+        }
 
         $request->user()->save();
 
