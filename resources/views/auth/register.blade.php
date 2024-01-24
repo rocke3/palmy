@@ -7,20 +7,20 @@
         </div>
 
         <div class="md:flex md:flex-row font-extrabold text-md">
-            <div class="md:w-[40%] md:me-2">
-                <label class="w-full border p-1 inline-block rounded-lg p-2  mt-4">
+            <div class="md:w-full md:me-2">
+                <label class="w-full border p-1 inline-block rounded-lg mt-4 opacity-50 cursor-not-allowed">
                     <span
-                        class="material-symbols-outlined p-3 bg-slate-200 rounded-full text-[#9b96bb]">volunteer_activism</span>
-                    <span class="ms-2 align-top">Doner</span>
-                    <input class="float-end" type="radio" name="group" value="0" required>
+                        class="material-symbols-outlined p-2 bg-slate-200 rounded-full text-[#9b96bb]">volunteer_activism</span>
+                    <span class="ms-2 align-top text-sm inline-block mt-2">Donor</span>
+                    <input class="float-end" type="radio" name="group" value="0" disabled>
                 </label>
             </div>
-            <div class="md:w-[60%]">
-                <label class="w-full border p-1 inline-block rounded-lg p-2  mt-4">
-                    <span class="material-symbols-outlined p-3 bg-slate-200 rounded-full text-[#9b96bb]">
+            <div class="md:w-full">
+                <label class="w-full border p-1 inline-block rounded-lg mt-4 cursor-pointer">
+                    <span class="material-symbols-outlined p-2 bg-slate-200 rounded-full text-[#9b96bb]">
                         group
                     </span>
-                    <span class="ms-2 align-top">Organization/Group</span>
+                    <span class="ms-2 align-top text-sm inline-block mt-2">Organization/Group</span>
                     <input class="float-end" type="radio" name="group" value="1" required>
                 </label>
             </div>
@@ -66,7 +66,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-primary-button class="ml-3">{{ __('Sign Up') }}</x-primary-button>
+                <x-primary-button>{{ __('Sign Up') }}</x-primary-button>
             </div>
         </div>
 

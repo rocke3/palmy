@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-gradient-to-r from-[#8280af] to-[#c3b2ca]">
     <!-- Primary Navigation Menu -->
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto ">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -11,9 +11,10 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex relative">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-5 sm:flex relative">
                     <form action="" method="">
-                        <input type="text" name='search' class="p-2 h-[40px] mt-3 rounded-full">
+                        <input type="text" name='search'
+                            class="p-2 h-[40px] w-[280px] max-w-[300px] mt-3 rounded-full">
                         <button class=" absolute right-2 top-5"><span
                                 class="material-symbols-outlined">search</span></button>
                     </form>

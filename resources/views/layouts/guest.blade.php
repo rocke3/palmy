@@ -29,19 +29,20 @@
 
 <body class="font-sans text-gray-900 antialiased lg:px-5">
     <div class="container relative">
-        <div class="lg:absolute top-0 left-0 w-full p-4">
+        <div class="lg:absolute top-0 left-0 w-full sm:p-4">
             <div class="mt-4 pt-4">
-                <div class="lg:flex lg:flex-row">
-                    <div class="w-[250px] text-3xl font-extrabold text-white">
-                        <img class=" inline-block" src="/img/logo.png" width="45" /> PALMY
+                <div class="flex flex-row">
+                    <div class="w-[70px] sm:w-[250px] text-3xl font-extrabold text-white">
+                        <a href=""><img class=" inline-block" src="/img/logo.png" width="45" /> <span
+                                class="hidden sm:inline-block">PALMY</span></a>
                     </div>
-                    <div class="text-center lg:text-end mt-6 lg:mt-0 w-full">
-                        <a class="btn btn-home me-1" href="/register">Join
+                    <div class="text-end w-full">
+                        <a class="btn btn-home btn-alt me-1" href="/register">Join
                             Now</a>
-                        <a class="btn btn-home btn-alt pe-14 relative" href="/login">
+                        <a class="btn btn-home btn-alt  pe-10 sm:pe-14 relative" href="/login">
                             SIGN IN
                             <span
-                                class="material-symbols-outlined absolute bg-white rounded-full h-[27px] w-[27px] text-[22px] ms-4 text-center text-[#8280af] p-[3px] right-[5px] top-[5px]">person</span>
+                                class="material-symbols-outlined absolute bg-white rounded-full h-[20px] w-[20px] sm:h-[27px] sm:w-[27px] text-[15px] sm:text-[22px] text-center text-[#8280af] p-[3px] right-[5px] top-[4px]">person</span>
                         </a>
                     </div>
                 </div>
@@ -49,8 +50,8 @@
         </div>
         <div class="lg:min-h-screen flex flex-col justify-center columns-2">
             <div class="lg:flex lg:flex-row">
-                <div class="w-full lg:max-w-2xl mt-6 lg:pt-6">
-                    <div class="p-6 box">
+                <div class="w-full max-w-[500px] mt-6 lg:pt-6">
+                    <div class="p-4 sm:p-6 box">
                         {{ $slot }}
                         <div class="mt-6 text-center">
                             <a class="inline-block border-2 rounded-full p-3 m-1 hover:shadow" href="">

@@ -42,7 +42,7 @@ input[type="checkbox"] {
         @apply rounded-full px-4 py-1 sm:px-7 bg-white hover:bg-[#8280af] hover:text-white border-2 border-white shadow-md shadow-[#8280af] inline-block;
     }
     .btn-home {
-        @apply font-extrabold text-xl;
+        @apply font-extrabold text-sm sm:text-xl;
     }
     .btn-gradiant {
         @apply bg-gradient-to-r from-[#9791b7] to-[#cab8cc]  border-0 text-white hover:bg-gradient-to-l font-bold;

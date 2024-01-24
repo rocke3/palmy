@@ -5,7 +5,8 @@
 
     <form class="mx-auto max-w-[400px]" method="POST" action="{{ route('login') }}">
         @csrf
-        <div class="text-5xl text-center mb-10 text-[#8280af]" style="font-family: 'EB Garamond', serif">Welcome</div>
+        <div class="text-5xl text-center mb-5 sm:mb-10 text-[#8280af]" style="font-family: 'EB Garamond', serif">Welcome
+        </div>
 
         <div class=" text-2xl font-extrabold">{{ __('Sign In') }}</div>
         <!-- Email Address -->
@@ -33,7 +34,7 @@
                 </div>
             @endif
 
-            <x-primary-button class="ml-3"> {{ __('Sign in') }}</x-primary-button>
+            <x-primary-button> {{ __('Sign in') }}</x-primary-button>
         </div>
     </form>
 </x-guest-layout>

@@ -1,5 +1,19 @@
 <x-app-layout>
+    <style>
+        .splide__pagination {
+            bottom: auto !important;
+            top: 15px
+        }
 
+        .splide__pagination .splide__pagination__page {
+            width: 50px;
+            border-radius: 5px !important;
+        }
+
+        .splide__pagination__page.is-active {
+            transform: scale(1.1) !important;
+        }
+    </style>
 
     <div class="container py-12">
         <div class="lg:grid lg:grid-cols-3 gap-4">
@@ -23,13 +37,13 @@
                 </div>
                 <div class="bg-white overflow-hidden shadow-sm rounded-[25px] mb-4">
                     <div class="p-3">
-                        <p class="font-bold text-2xl text-[#8280af]">
+                        <p class="font-bold text-2xl text-[#8280af] mb-3">
                             <span class="material-symbols-outlined align-bottom text-[30px]">notifications_active
                             </span> Notifications
                         </p>
                         <div class="h-[320px] overflow-y-scroll px-2 ">
 
-                            <div class="flex flex-row shadow-lg border rounded-lg p-3 mt-4">
+                            <div class="flex flex-row shadow-lg border rounded-lg p-3 mb-3">
                                 <div class="w-[55px]">
                                     <img class="m-auto" src="/img/fb.png" width="50">
                                 </div>
@@ -39,7 +53,7 @@
                                 </div>
                                 <div class="w-[100px] text-sm font-bold  text-slate-400 md:mt-4">10:30 am</div>
                             </div>
-                            <div class="flex flex-row shadow-lg border rounded-lg p-3 mt-4">
+                            <div class="flex flex-row shadow-lg border rounded-lg p-3 mb-3">
                                 <div class="w-[55px]">
                                     <img class="m-auto" src="/img/apple.png" width="50">
                                 </div>
@@ -51,7 +65,7 @@
                             </div>
 
                             @for ($i = 0; $i < 10; $i++)
-                                <div class="flex flex-row shadow-lg border rounded-lg p-3 mt-4">
+                                <div class="flex flex-row shadow-lg border rounded-lg p-3 mb-3">
                                     <div class="w-[55px]">
                                         <img class="m-auto" src="/img/google.png" width="50">
                                     </div>
@@ -75,8 +89,9 @@
                                 <span class="material-symbols-outlined align-bottom text-[30px]">favorite</span>
                                 Donations
                             </div>
-                            <div class="text-end text-xl w-[170px]">
-                                $ 1,200 Total
+                            <div class="text-end w-[230px]">
+                                <button class="btn btn-gradiant">{{ __('$ 1,200 Total') }}</button>
+
                             </div>
                         </div>
                     </div>
@@ -91,12 +106,12 @@
                 </div>
                 <div class="bg-white overflow-hidden shadow-sm rounded-[25px] mb-4 ">
                     <div class="p-3">
-                        <p class="font-bold text-2xl text-[#8280af]">
+                        <p class="font-bold text-2xl text-[#8280af] mb-3">
                             Project
                         </p>
-                        <div class="h-[320px] overflow-y-scroll px-2">
+                        <div class="h-[320px] overflow-y-scroll px-2 ">
                             @for ($i = 0; $i < 10; $i++)
-                                <div class="shadow rounded-lg overflow-hidden mt-3">
+                                <div class="shadow rounded-lg overflow-hidden mb-3">
                                     <img class="w-full" src="/img/image.png" alt="">
                                     <div class="p-2">
                                         <p class="font-bold">Plant Trees Plant Life</p>
@@ -126,30 +141,48 @@
                     </div>
                     <button class="btn btn-gradiant p-1 px-3 h-7">{{ __('Follow') }}</button>
                 </div>
-                <div>
-                    <section class="splide p-4 mt-2" aria-labelledby="carousel-heading">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <img src="/img/slide1.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="/img/slide2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="/img/slide3.png">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <div class="text-center">
-                        <button class="btn btn-gradiant mt-4">{{ __('New Post') }}</button>
-                        <button class="btn btn-gradiant mt-4">{{ __('New Project') }}</button>
+                <div class="h-[610px] overflow-y-scroll ">
+                    <div>
+                        <section id="splide1" class="splide p-4 mt-2" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img class=" w-full mx-auto" src="/img/slide1.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class=" w-full mx-auto" src="/img/slide2.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class=" w-full mx-auto" src="/img/slide3.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
                     </div>
+                    <div>
+                        <section id="splide2" class="splide p-4 mt-2" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img class=" w-full mx-auto" src="/img/slide1.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class=" w-full mx-auto" src="/img/slide2.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class=" w-full mx-auto" src="/img/slide3.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-gradiant px-1 mt-4 w-full sm:w-[40%]">{{ __('New Post') }}</button>
+                    <button class="btn btn-gradiant px-1 mt-4 w-full sm:w-[40%]">{{ __('New Project') }}</button>
                 </div>
             </div>
         </div>
-
 
 
 
@@ -187,8 +220,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var splide = new Splide('.splide');
-            splide.mount();
+            new Splide('#splide1').mount();
+            new Splide('#splide2').mount();
             const data = {
                 datasets: [{
                     data: [300, 50, 100],
