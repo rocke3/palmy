@@ -50,7 +50,7 @@
         </div>
         <div class="lg:min-h-screen flex flex-col justify-center columns-2">
             <div class="lg:flex lg:flex-row">
-                <div class="w-full max-w-[500px] mt-6 lg:pt-6">
+                <div class="w-full max-w-[570px] mt-6 lg:pt-6 sm:ps-16">
                     <div class="p-4 sm:p-6 box">
                         {{ $slot }}
                         <div class="mt-6 text-center">
