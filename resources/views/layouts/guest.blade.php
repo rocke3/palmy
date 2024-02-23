@@ -27,9 +27,9 @@
     </style>
 </head>
 
-<body class="font-sans text-gray-900 antialiased lg:px-5">
-    <div class="container relative">
-        <div class="lg:absolute top-0 left-0 w-full sm:p-4">
+<body class="font-sans text-gray-900 antialiased ">
+    <div class="container relative lg:px-5">
+        <div class=" sm:p-4">
             <div class="mt-4 pt-4">
                 <div class="flex flex-row">
                     <div class="w-[70px] sm:w-[250px] text-3xl font-extrabold text-white">
@@ -48,8 +48,8 @@
                 </div>
             </div>
         </div>
-        <div class="lg:min-h-screen flex flex-col justify-center columns-2">
-            <div class="lg:flex lg:flex-row">
+        <div class=" flex flex-col justify-center columns-2">
+            <div class="lg:flex lg:flex-row mb-10">
                 <div class="w-full max-w-[570px] mt-6 lg:pt-6 sm:ps-16">
                     <div class="p-4 sm:p-6 box">
                         {{ $slot }}
@@ -67,7 +67,7 @@
                     </div>
 
                     @if (!Route::is('register'))
-                        <div class=" mt-4 text-center">
+                        <div class=" mt-4 text-center mb-4">
                             <a class="inline-block p-1" href="">
                                 <img class="shadow rounded-xl hover:shadow-lg" width="190" src="/img/appstore.png">
                             </a>
@@ -85,6 +85,55 @@
 
         </div>
     </div>
+    <div id="footerMenu" class="lg:mt-12 text-white bg-[#8280af]">
+        <div class="container lg:px-5 py-2">
+            <div class="grid grid-cols-2 md:grid-cols-4  xl:grid-cols-8 text-center ">
+                <div class="p-1">
+                    <img class="inline-block me-1" src="/img/logo.png" width="30">
+                    <span class=" font-bold text-xl ">PALMY</span>
+                </div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="accessibility"
+                        data-modal-toggle="accessibility">Accessibility</a></div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="privacy"
+                        data-modal-toggle="privacy">Privacy Policy</a></div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="cookie"
+                        data-modal-toggle="cookie">Cookie Policy</a></div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="brand"
+                        data-modal-toggle="brand">Brand Policy</a></div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="copyright"
+                        data-modal-toggle="copyright">Copyright Policy</a></div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="support"
+                        data-modal-toggle="support">Support</a></div>
+                <div><a class=" inline-block p-2 hover:underline" href="#" data-modal-target="contact"
+                        data-modal-toggle="contact">Contact</a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <x-modal id="accessibility">
+        <x-accessibility />
+    </x-modal>
+    <x-modal id="privacy">
+        <x-privacy />
+    </x-modal>
+    <x-modal id="cookie">
+        <x-cookie />
+    </x-modal>
+    <x-modal id="brand">
+        <x-brand />
+    </x-modal>
+    <x-modal id="copyright">
+        <x-copyright />
+    </x-modal>
+    <x-modal id="support">
+        <x-support />
+    </x-modal>
+    <x-modal id="contact">
+        <x-contact />
+    </x-modal>
+
+
 </body>
 
 </html>
