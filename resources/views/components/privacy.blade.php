@@ -293,24 +293,16 @@
 
 
 
-<p>Palmy </p>
+<p class="mt-3"><b>Palmy </b></p>
 
 <p>300 Lenora Street 6135 </p>
 
 <p>Seattle, Washington 98101 </p>
 
+<p>Email Address: <a href="mailto:contact@palmy.io">contact@palmy.io</a> </p>
 
-
-<p>Email Address: </p>
-
-<p>contact@palmy.io </p>
-
-
-
-<p>Phone Number: </p>
-
-<p>2067527883 </p>
+<p>Phone Number: 2067527883 </p>
 
 
 
-<p>Effective as of February 24, 2024 </p>
+<p class="mt-2">Effective as of February 24, 2024 </p>
